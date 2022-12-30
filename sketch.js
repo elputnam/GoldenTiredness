@@ -15,6 +15,8 @@ let deg1 = 0;
 let deg2 = 0;
 let alp = 100;
 let inc = 0.25;
+let changer = 0.0001;
+let size = 0;
 
 //Screens
 let screens = [];
@@ -123,12 +125,13 @@ function squares(){
   push();
   translate(pixX1, pixY1);
   rotate(deg1);
+
     for (let i = 0; i<100; i++){ 
       // noStroke();
       stroke(0, alp);
       fill(255, 1);
       rectMode(CENTER)
-      rect(0, 0, 4*i, 8*i);
+      rect(0, 0, 4*i);
     }
   pop();
   deg1 += 0.005;
@@ -148,25 +151,27 @@ function squares(){
     pixY1 = 100;
   }
 
+
   //Screen 2
   push();
-
+  // scale(size);
   translate(pixX2, pixY2);
   rotate(deg2);
-    for (let i = 0; i<100; i++){ 
+    for (let i = 0; i<150; i++){ 
       // noStroke();
       stroke(0, alp);
       fill(255, 1);
       rectMode(CENTER)
-      rect(0, 0, 10*i, 2*i);
+      rect(0, 0, 4*i);
     }
   pop();
 
   alp += inc;
 
-  pixX2 += random(-1, 1);
+  pixX2 += random(-, 1);
   pixY2 += random(-1, 1);
 
+  size += changer;
   deg2 -= 0.005;
 
   if (alp < 0 || alp > 100){
@@ -183,6 +188,10 @@ function squares(){
     pixY2 = height-100;
   } else if (pixY2 > height-100){
     pixY2 = 100;
+  }
+
+  if (size > 2 || size < 0){
+    changer *= -1;
   }
 }
 
