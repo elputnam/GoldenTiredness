@@ -86,7 +86,7 @@ class Screen{
   }
 
   update(){
-    this.acc.add(random(-0.5, 0.5), random(-0.5, 0.5))
+    // this.acc.add(random(-0.5, 0.5), random(-0.5, 0.5))
     this.vel.add(this.acc);
     this.vel.limit(this.maxspeed);
     this.pos.add(this.vel);
@@ -123,18 +123,18 @@ function squares(){
   push();
   translate(pixX1, pixY1);
   rotate(deg1);
-    for (let i = 0; i<100; i++){ 
+    for (let i = 0; i<150; i++){ 
       // noStroke();
       stroke(0, alp);
       fill(255, 1);
       rectMode(CENTER)
-      rect(0, 0, 4*i);
+      rect(0, 0, 4*i, 8*i);
     }
   pop();
   deg1 += 0.005;
 
-  pixX1 += random(-5, 5);
-  pixY1 += random(-5, 5);
+  pixX1 += random(-1, 1);
+  pixY1 += random(-1, 1);
 
   if (pixX1 < 100){
     pixX1 = width-100;
@@ -153,19 +153,19 @@ function squares(){
 
   translate(pixX2, pixY2);
   rotate(deg2);
-    for (let i = 0; i<120; i++){ 
+    for (let i = 0; i<150; i++){ 
       // noStroke();
       stroke(0, alp);
       fill(255, 1);
       rectMode(CENTER)
-      rect(0, 0, 4*i);
+      rect(0, 0, 10*i, 2*i);
     }
   pop();
 
   alp += inc;
 
-  pixX2 += random(-2, 2);
-  pixY2 += random(-2, 2);
+  pixX2 += random(-1, 1);
+  pixY2 += random(-1, 1);
 
   deg2 -= 0.005;
 
