@@ -123,7 +123,7 @@ function squares(){
   push();
   translate(pixX1, pixY1);
   rotate(deg1);
-    for (let i = 0; i<150; i++){ 
+    for (let i = 0; i<100; i++){ 
       // noStroke();
       stroke(0, alp);
       fill(255, 1);
@@ -153,7 +153,7 @@ function squares(){
 
   translate(pixX2, pixY2);
   rotate(deg2);
-    for (let i = 0; i<150; i++){ 
+    for (let i = 0; i<100; i++){ 
       // noStroke();
       stroke(0, alp);
       fill(255, 1);
