@@ -136,8 +136,8 @@ function squares(){
   pop();
   deg1 += 0.005;
 
-  pixX1 += random(-1, 1);
-  pixY1 += random(-1, 1);
+  pixX1 += random(-5, 5);
+  pixY1 += random(-5, 5);
 
   if (pixX1 < 100){
     pixX1 = width-100;
@@ -168,7 +168,7 @@ function squares(){
 
   alp += inc;
 
-  pixX2 += random(-, 1);
+  pixX2 += random(-1, 1);
   pixY2 += random(-1, 1);
 
   size += changer;
